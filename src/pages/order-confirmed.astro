@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { CONTACT_EMAIL, DELIVERY_TIME } from '../consts.js';
+---
+<Base title="Order Confirmed" description="Thanks for your purchase. Your course access link is on its way by email." noindex>
+  <div class="wrap">
+    <div class="page-head center" style="padding-block:80px">
+      <p class="eyebrow">Payment received</p>
+      <h1>Thank you. You're in.</h1>
+      <p class="lead" style="margin-inline:auto">Stripe has emailed you a receipt. Your private link to the course videos will arrive by email {DELIVERY_TIME}, sent to the address you used at checkout.</p>
+      <div class="box prose" style="margin:32px auto 0;text-align:left;padding:22px">
+        <h2 style="margin-top:0">What happens next</h2>
+        <ol>
+          <li>Watch your inbox, and your spam or promotions folder, for an email from The Agency School.</li>
+          <li>Open the link in that email to watch or download the course videos.</li>
+          <li>Keep the link private. It is for your use only.</li>
+        </ol>
+        <p>Nothing after {DELIVERY_TIME}? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the email address you used to pay.</p>
+      </div>
+    </div>
+  </div>
+</Base>

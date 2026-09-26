@@ -156,3 +156,5 @@ a{color:var(--lagoon)}
 .steps b{display:block;font:700 19px/1.25 var(--display);margin-bottom:4px}
 .steps span{color:var(--muted)}
 .center{text-align:center}
+.buy{display:grid;gap:4px;justify-items:start}
+.buy a:not(.btn),.addon a{padding:10px 0;font-weight:600}

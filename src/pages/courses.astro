@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { SITE_URL, SITE_NAME } from '../consts.js';
+import { SITE_URL, SITE_NAME, STRIPE_LINKS, DELIVERY_TIME } from '../consts.js';
 
 const provider = { '@type': 'Organization', name: SITE_NAME, sameAs: `${SITE_URL}/` };
 const course = (name: string, description: string, price: string) => ({
@@ -31,7 +31,7 @@ const course = (name: string, description: string, price: string) => ({
     <section style="padding-top:28px">
       <div class="founding">
         <b>Founding cohort pricing: first 20 students</b>
-        <span>Core course $297 and Launch Package $997, in exchange for feedback.</span>
+        <span>Core course $297 and Launch Package $997, in exchange for feedback. <a href="/contact/">Ask for a founding code</a>.</span>
       </div>
 
       <div class="plans">
@@ -48,7 +48,14 @@ const course = (name: string, description: string, price: string) => ({
             <li>Proposal, contract and onboarding templates</li>
             <li>Contractor list, unlocked after purchase</li>
           </ul>
-          <a class="btn alt" href="/free-book/">Get the free book first</a>
+          {STRIPE_LINKS.core ? (
+            <div class="buy">
+              <a class="btn alt" href={STRIPE_LINKS.core} rel="nofollow">Buy the Core Course, $497</a>
+              {STRIPE_LINKS.corePlan && <a href={STRIPE_LINKS.corePlan} rel="nofollow">Or pay in 3 payments of $197</a>}
+            </div>
+          ) : (
+            <a class="btn alt" href="/free-book/">Get the free book first</a>
+          )}
         </div>
 
         <div class="plan hi">
@@ -64,7 +71,11 @@ const course = (name: string, description: string, price: string) => ({
             <li>Monthly live 2-hour group session with replays</li>
             <li>6 months of community access</li>
           </ul>
-          <a class="btn" href="/free-book/">Get the free book first</a>
+          {STRIPE_LINKS.launch ? (
+            <a class="btn" href={STRIPE_LINKS.launch} rel="nofollow">Buy the Launch Package, $1,500</a>
+          ) : (
+            <a class="btn" href="/free-book/">Get the free book first</a>
+          )}
         </div>
       </div>
     </section>
@@ -72,11 +83,11 @@ const course = (name: string, description: string, price: string) => ({
     <section style="padding-top:0">
       <h2>Add-ons</h2>
       <div class="addons">
-        <div class="addon"><b>Template pack, $37</b><span>Extra proposals, ad swipe files and checklists.</span></div>
-        <div class="addon"><b>Hosting and tools bundle, $97 setup</b><span>Reseller hosting plus Zao Chat and Zao Flo access.</span></div>
-        <div class="addon"><b>Community, $47/month</b><span>Live class, replays and a weekly template. Free for the first 30 days.</span></div>
+        <div class="addon"><b>Template pack, $37</b><span>Extra proposals, ad swipe files and checklists.</span>{STRIPE_LINKS.templatePack && <a href={STRIPE_LINKS.templatePack} rel="nofollow">Buy template pack</a>}</div>
+        <div class="addon"><b>Hosting and tools bundle, $97 setup</b><span>Reseller hosting plus Zao Chat and Zao Flo access.</span>{STRIPE_LINKS.hostingBundle && <a href={STRIPE_LINKS.hostingBundle} rel="nofollow">Buy hosting and tools bundle</a>}</div>
+        <div class="addon"><b>Community, $47/month</b><span>Live class, replays and a weekly template. Free for the first 30 days.</span>{STRIPE_LINKS.community && <a href={STRIPE_LINKS.community} rel="nofollow">Join the community</a>}</div>
       </div>
-      <p class="fine" style="margin-top:22px">Before you buy, read the <a href="/refund-policy/">refund policy</a> and the <a href="/earnings-disclaimer/">earnings disclaimer</a>.</p>
+      <p class="fine" style="margin-top:22px">Secure checkout by Stripe. Your course access link arrives by email {DELIVERY_TIME} of purchase. Before you buy, read the <a href="/refund-policy/">refund policy</a> and the <a href="/earnings-disclaimer/">earnings disclaimer</a>.</p>
     </section>
   </div>
 </Base>

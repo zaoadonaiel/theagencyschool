@@ -1,12 +1,13 @@
 ---
 import Legal from '../layouts/Legal.astro';
-import { CONTACT_EMAIL } from '../consts.js';
+import { CONTACT_EMAIL, DELIVERY_TIME } from '../consts.js';
 ---
 <Legal title="Terms of Service" description="The terms that apply when you use The Agency School website, buy a course or hire contractors through the team hub.">
   <p>By using this website or buying a product from The Agency School, you agree to these terms. If you don't agree, please don't use the site.</p>
 
   <h2>Courses and access</h2>
-  <p>When you buy a course, you get a personal, non-transferable licence to access its content for your own use. You may not share your login, resell the material or publish it elsewhere.</p>
+  <p>After you pay through Stripe, we email a private link to the course videos, hosted on Nextcloud, to the address you used at checkout, {DELIVERY_TIME}.</p>
+  <p>When you buy a course, you get a personal, non-transferable licence to access its content for your own use. You may not share your access link, resell the material or publish it elsewhere.</p>
 
   <h2>Payments</h2>
   <p>Prices are in US dollars. If you choose a payment plan, you agree to pay every instalment. We may pause access if a payment fails. Refunds are covered by our <a href="/refund-policy/">refund policy</a>.</p>
