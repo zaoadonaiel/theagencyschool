@@ -1,0 +1,25 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { CONTACT_EMAIL, REFUND_DAYS } from '../consts.js';
+---
+<Legal title="Refund Policy" description={`How refunds work for The Agency School courses, add-ons and subscriptions, including the ${REFUND_DAYS}-day request window.`}>
+  <p>We want you to be confident in your purchase. This page explains when refunds are available.</p>
+
+  <h2>Courses</h2>
+  <p>You can request a refund on the Core Course or the Launch Package within {REFUND_DAYS} days of purchase. Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with your order details. Approved refunds go back to your original payment method.</p>
+
+  <h2>Payment plans</h2>
+  <p>If you are on a payment plan and receive a refund, any remaining instalments are cancelled.</p>
+
+  <h2>Contractor jobs</h2>
+  <p>Jobs you post and approve in the team hub are not refundable once the work has been delivered and approved.</p>
+
+  <h2>Subscriptions</h2>
+  <p>Hosting, tools and community memberships are billed monthly. You can cancel any time, and cancellation stops future charges. Partial months are not refunded.</p>
+
+  <h2>Add-ons</h2>
+  <p>Digital downloads such as the template pack are not refundable once downloaded.</p>
+
+  <h2>Questions</h2>
+  <p>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+</Legal>

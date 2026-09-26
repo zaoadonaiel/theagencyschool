@@ -1,0 +1,23 @@
+---
+import Base from './Base.astro';
+import { LEGAL_UPDATED } from '../consts.js';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const updated = new Date(`${LEGAL_UPDATED}T00:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+<Base title={title} description={description}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Legal</p>
+      <h1>{title}</h1>
+      <p class="lead">Last updated <time datetime={LEGAL_UPDATED}>{updated}</time></p>
+    </div>
+    <article class="prose">
+      <slot />
+    </article>
+  </div>
+</Base>

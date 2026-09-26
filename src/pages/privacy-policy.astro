@@ -1,0 +1,43 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { CONTACT_EMAIL } from '../consts.js';
+---
+<Legal title="Privacy Policy" description="How The Agency School collects, uses and protects your personal information, including email sign-ups, purchases and cookies.">
+  <p>This policy explains what personal information The Agency School ("we", "us") collects when you use this website, how we use it and the choices you have.</p>
+
+  <h2>Information we collect</h2>
+  <ul>
+    <li><strong>Information you give us</strong>: your name and email when you request the free book, register for a webinar, buy a course or contact us.</li>
+    <li><strong>Purchase information</strong>: order details. Card payments are handled by our payment processor; we do not store full card numbers.</li>
+    <li><strong>Usage information</strong>: basic technical data such as pages visited, browser type and approximate location, collected through server logs and analytics.</li>
+  </ul>
+
+  <h2>How we use it</h2>
+  <ul>
+    <li>To send the free book, webinar invites and course access you asked for.</li>
+    <li>To send marketing emails, which you can unsubscribe from at any time.</li>
+    <li>To process orders, provide support and prevent fraud.</li>
+    <li>To understand how the site is used and improve it.</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>We do not sell your personal information. We share it only with service providers that help us run the business, such as our email platform, payment processor, hosting provider and analytics, and only as needed for them to do that work. We may also disclose information if the law requires it.</p>
+
+  <h2>Cookies</h2>
+  <p>We use essential cookies to make the site work and may use analytics cookies to understand traffic. You can block or delete cookies in your browser settings.</p>
+
+  <h2>How long we keep it</h2>
+  <p>We keep your information for as long as your account or subscription is active, and afterwards only as long as needed for legal, tax or accounting purposes.</p>
+
+  <h2>Your rights</h2>
+  <p>Depending on where you live, including under the GDPR and the CCPA, you may have the right to access, correct, delete or export your personal information, and to object to certain uses. To make a request, email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+
+  <h2>Children</h2>
+  <p>This site is not intended for anyone under 18, and we do not knowingly collect information from children.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy. The date at the top shows when it last changed.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+</Legal>

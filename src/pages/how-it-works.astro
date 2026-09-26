@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import SignupForm from '../components/SignupForm.astro';
+import { SITE_URL } from '../consts.js';
+
+const steps = [
+  { t: 'Get the free book', d: 'Learn who agencies serve, what they sell, why clients pay monthly, and where the work gets done.' },
+  { t: 'Join the free webinar', d: 'See the how: the exact accounts to open, what to charge and how the team hub works.' },
+  { t: 'Learn the playbook', d: 'Work through the WordPress agency model for SEO and website clients at your own pace.' },
+  { t: 'Land your first 3 clients', d: 'Use Craigslist posts, a referral offer that pays only when you close, and ready-made scripts.' },
+  { t: 'Post the job to the team hub', d: 'Pick a service from a fixed menu. One of my contractors claims it and builds it on the hosting you rent from the hub.' },
+  { t: 'Approve, deliver and keep your margin', d: 'You approve the work, hand it to your client and bill them monthly for hosting and tools.' },
+];
+
+const howTo = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to start a digital marketing agency with no coding',
+  description: 'The six steps The Agency School uses to go from zero to a working WordPress agency with a contractor team.',
+  step: steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.t, text: s.d, url: `${SITE_URL}/how-it-works/#step-${i + 1}` })),
+};
+---
+<Base
+  title="How It Works: Start an Agency With No Coding"
+  description="The six steps to start a WordPress digital marketing agency: free book, webinar, playbook, first 3 clients, and a contractor team that builds the work."
+  schema={[howTo]}
+>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">How it works</p>
+      <h1>You sell. The team builds.</h1>
+      <p class="lead">Most people quit because they think they have to learn hosting, WordPress and design first. This model skips that. Here is the whole path, step by step.</p>
+    </div>
+
+    <section style="padding-top:28px">
+      <ol class="steps">
+        {steps.map((s, i) => <li id={`step-${i + 1}`}><b>{s.t}</b><span>{s.d}</span></li>)}
+      </ol>
+    </section>
+
+    <section class="band" aria-labelledby="hub">
+      <div class="wrap">
+        <p class="eyebrow">The team hub</p>
+        <h2 id="hub">Rent the hard parts. Keep the margin.</h2>
+        <p class="sub">Hosting and AI tools live in one place, with my team there for support.</p>
+        <div class="math">
+          <div class="box">
+            <h3>Managed hosting</h3>
+            <div class="row"><span>You pay the hub</span><b>$10/mo</b></div>
+            <div class="row"><span>You charge your client</span><b>$40 to $60/mo</b></div>
+            <div class="row"><span>Left with you</span><b class="gain">$30 to $50/mo</b></div>
+          </div>
+          <div class="box">
+            <h3>Zao Chat and Zao Flo</h3>
+            <div class="row"><span>You pay the hub</span><b>$50/mo</b></div>
+            <div class="row"><span>You charge your client</span><b>$300/mo</b></div>
+            <div class="row"><span>Left with you</span><b class="gain">$250/mo</b></div>
+            <small>AI lead-gen chatbot and AI blog automation.</small>
+          </div>
+        </div>
+        <p class="fine" style="color:var(--band-muted)">Example math to show the model, per client, before your own costs and taxes. It is not a promise of income.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Start with the free book.</h2>
+      <p class="sub" style="margin-inline:auto">It covers who, what, why, where and when. The webinar covers the how.</p>
+      <SignupForm id="how" center />
+    </section>
+  </div>
+</Base>

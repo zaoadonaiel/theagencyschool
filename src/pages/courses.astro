@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE_URL, SITE_NAME } from '../consts.js';
+
+const provider = { '@type': 'Organization', name: SITE_NAME, sameAs: `${SITE_URL}/` };
+const course = (name: string, description: string, price: string) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Course',
+  name,
+  description,
+  provider,
+  offers: { '@type': 'Offer', category: 'Paid', price, priceCurrency: 'USD', url: `${SITE_URL}/courses/` },
+  hasCourseInstance: { '@type': 'CourseInstance', courseMode: 'Online', courseWorkload: 'PT20H' },
+});
+---
+<Base
+  title="Courses and Pricing"
+  description="Compare the Core Course ($497) and the Launch Package ($1,500). Founding cohort pricing for the first 20 students: $297 and $997."
+  schema={[
+    course('Core Course', 'Video playbook for starting a WordPress digital marketing agency, with first-client scripts, templates and a contractor list.', '497'),
+    course('Launch Package', 'The Core Course plus 10 contractors at founder rates, a hosting and tools setup guide, monthly live sessions and 6 months of community.', '1500'),
+  ]}
+>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">Courses</p>
+      <h1>Two ways to start</h1>
+      <p class="lead">Learn it yourself, or get the full system with my contractors at my rates.</p>
+    </div>
+
+    <section style="padding-top:28px">
+      <div class="founding">
+        <b>Founding cohort pricing: first 20 students</b>
+        <span>Core course $297 and Launch Package $997, in exchange for feedback.</span>
+      </div>
+
+      <div class="plans">
+        <div class="plan">
+          <div>
+            <h2 style="font-size:26px;margin:0">Core Course</h2>
+            <p style="color:var(--muted);margin-top:4px">Learn it yourself</p>
+          </div>
+          <div class="price"><b>$497</b><span>or 3 payments of $197</span></div>
+          <ul>
+            <li>Video playbook: start an agency with WordPress</li>
+            <li>First 3 Clients module: Craigslist, referrals, scripts</li>
+            <li>The "where everything is" map: what to buy and open</li>
+            <li>Proposal, contract and onboarding templates</li>
+            <li>Contractor list, unlocked after purchase</li>
+          </ul>
+          <a class="btn alt" href="/free-book/">Get the free book first</a>
+        </div>
+
+        <div class="plan hi">
+          <div>
+            <h2 style="font-size:26px;margin:0">Launch Package</h2>
+            <p style="color:var(--muted);margin-top:4px">The full system and my team</p>
+          </div>
+          <div class="price"><b>$1,500</b><span>one payment</span></div>
+          <ul>
+            <li>Everything in the Core Course</li>
+            <li>My 10 contractors, hired at my rates through the hub</li>
+            <li>Hosting and tools setup guide</li>
+            <li>Monthly live 2-hour group session with replays</li>
+            <li>6 months of community access</li>
+          </ul>
+          <a class="btn" href="/free-book/">Get the free book first</a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0">
+      <h2>Add-ons</h2>
+      <div class="addons">
+        <div class="addon"><b>Template pack, $37</b><span>Extra proposals, ad swipe files and checklists.</span></div>
+        <div class="addon"><b>Hosting and tools bundle, $97 setup</b><span>Reseller hosting plus Zao Chat and Zao Flo access.</span></div>
+        <div class="addon"><b>Community, $47/month</b><span>Live class, replays and a weekly template. Free for the first 30 days.</span></div>
+      </div>
+      <p class="fine" style="margin-top:22px">Before you buy, read the <a href="/refund-policy/">refund policy</a> and the <a href="/earnings-disclaimer/">earnings disclaimer</a>.</p>
+    </section>
+  </div>
+</Base>

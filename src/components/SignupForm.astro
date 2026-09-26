@@ -1,0 +1,26 @@
+---
+interface Props {
+  id: string;
+  center?: boolean;
+}
+const { id, center = false } = Astro.props;
+---
+<form class="signup" data-signup novalidate style={center ? 'margin-inline:auto;justify-content:center' : undefined}>
+  <label for={`email-${id}`} class="skip">Your email</label>
+  <input id={`email-${id}`} type="email" name="email" autocomplete="email" placeholder="Your email" required>
+  <button class="btn" type="submit">Send me the free book</button>
+</form>
+<div class="ok" role="status" hidden style={center ? 'margin-inline:auto' : undefined}>
+  Mockup only: this form does not send anything yet.
+</div>
+
+<script>
+  // TODO: connect to the email platform (ConvertKit, Mailchimp, etc.) and redirect to /thank-you/.
+  document.querySelectorAll<HTMLFormElement>('form[data-signup]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const ok = form.nextElementSibling as HTMLElement | null;
+      if (ok) ok.hidden = false;
+    });
+  });
+</script>

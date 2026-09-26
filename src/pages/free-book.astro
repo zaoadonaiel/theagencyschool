@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import SignupForm from '../components/SignupForm.astro';
+import { SITE_URL, SITE_NAME, FOUNDER } from '../consts.js';
+
+const book = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: 'How Digital Marketing Agencies Work',
+  author: { '@type': 'Person', name: FOUNDER },
+  publisher: { '@type': 'Organization', name: SITE_NAME },
+  bookFormat: 'https://schema.org/EBook',
+  isAccessibleForFree: true,
+  url: `${SITE_URL}/free-book/`,
+};
+---
+<Base
+  title="Free Book: How Digital Marketing Agencies Work"
+  description="Get the free book on how digital marketing agencies work: who they serve, what they sell, why clients pay monthly and where the work gets done."
+  schema={[book]}
+>
+  <div class="wrap">
+    <div class="hero" style="padding-top:40px">
+      <div>
+        <p class="eyebrow">Free book</p>
+        <h1 style="margin-top:16px">How digital marketing agencies <span>actually work.</span></h1>
+        <p class="lead">A short, plain-English book on the business model. Read it in an evening, then join the free webinar for the how.</p>
+        <SignupForm id="book" />
+        <p class="fine">We'll email you the book and the webinar invite. Unsubscribe any time. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+      </div>
+      <div class="box">
+        <h2 style="font-size:26px;margin:0 0 12px">What's inside</h2>
+        <ul class="prose" style="padding:0;margin:0">
+          <li><strong>Who</strong>: the local businesses that buy websites and SEO every month</li>
+          <li><strong>What</strong>: the services that sell, and what to charge for them</li>
+          <li><strong>Why</strong>: how monthly hosting and tools create recurring income</li>
+          <li><strong>Where</strong>: the accounts and tools the model runs on</li>
+          <li><strong>When</strong>: a realistic timeline to your first 3 clients</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Base>

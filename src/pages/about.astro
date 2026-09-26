@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE_URL, FOUNDER } from '../consts.js';
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: FOUNDER,
+  jobTitle: 'Founder',
+  worksFor: { '@type': 'Organization', name: 'The X Digital' },
+  url: `${SITE_URL}/about/`,
+  knowsAbout: ['Digital marketing', 'SEO', 'WordPress', 'Agency operations'],
+};
+---
+<Base
+  title="About Davey Duarte"
+  description="Davey Duarte founded The X Digital, a remote-first agency with 100+ US clients. 20+ years and 1,000+ projects, now working 1 to 4 hours a day."
+  schema={[person]}
+>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">About</p>
+      <h1>Hi, I'm Davey Duarte</h1>
+      <p class="lead">I built a remote agency that runs on a few hours a day. The Agency School teaches that model and gives you the team behind it.</p>
+    </div>
+
+    <section style="padding-top:28px">
+      <div class="split">
+        <div>
+          <div class="avatar" aria-hidden="true">D</div>
+          <p class="avatar-note">Photo placeholder</p>
+        </div>
+        <div class="prose" style="padding:0">
+          <p>I'm the founder of <strong>The X Digital</strong>, a remote-first agency with 100+ clients across the US. Over 20 years I've worked on more than 1,000 projects, and today I work 1 to 4 hours a day from wherever I'm living.</p>
+          <p>Most people who want to start an agency stall at the technical part: hosting, WordPress, design. I hand that part to a small team of contractors, so my time goes to selling and looking after clients.</p>
+          <p>The Agency School packages that system: the playbook, the scripts that land the first clients, and access to the same contractors I use, at my rates.</p>
+          <h2>What I do and don't do</h2>
+          <p>I show you the system and give you the team. I don't do your work for you and I can't guarantee results. Your income depends on the clients you win and the effort you put in.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="proof" aria-label="Founder background" style="margin-bottom:56px">
+      <div><b>100+</b><span>agency clients served across the US</span></div>
+      <div><b>20+</b><span>years in digital marketing</span></div>
+      <div><b>1,000+</b><span>projects delivered</span></div>
+    </div>
+
+    <section class="cta" style="padding-top:0">
+      <h2>See how the model works.</h2>
+      <p style="margin-top:18px"><a class="btn" href="/how-it-works/">How it works</a></p>
+    </section>
+  </div>
+</Base>

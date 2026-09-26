@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { FAQ, faqSchema } from '../faq.js';
+---
+<Base
+  title="Frequently Asked Questions"
+  description="Answers about The Agency School: coding, experience, how the contractors work, part-time schedules, pricing, payment plans and the founding cohort."
+  schema={[faqSchema()]}
+>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="eyebrow">FAQ</p>
+      <h1>Frequently asked questions</h1>
+      <p class="lead">Can't find your answer? <a href="/contact/">Contact us</a>.</p>
+    </div>
+    <section style="padding-top:28px">
+      {FAQ.map((f) => (
+        <details><summary>{f.q}</summary><p>{f.a}</p></details>
+      ))}
+    </section>
+  </div>
+</Base>

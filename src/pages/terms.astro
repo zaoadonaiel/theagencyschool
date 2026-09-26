@@ -1,0 +1,34 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { CONTACT_EMAIL } from '../consts.js';
+---
+<Legal title="Terms of Service" description="The terms that apply when you use The Agency School website, buy a course or hire contractors through the team hub.">
+  <p>By using this website or buying a product from The Agency School, you agree to these terms. If you don't agree, please don't use the site.</p>
+
+  <h2>Courses and access</h2>
+  <p>When you buy a course, you get a personal, non-transferable licence to access its content for your own use. You may not share your login, resell the material or publish it elsewhere.</p>
+
+  <h2>Payments</h2>
+  <p>Prices are in US dollars. If you choose a payment plan, you agree to pay every instalment. We may pause access if a payment fails. Refunds are covered by our <a href="/refund-policy/">refund policy</a>.</p>
+
+  <h2>Contractors and the team hub</h2>
+  <p>Contractors available through the team hub are independent contractors, not our employees. Their availability is not guaranteed. You are responsible for reviewing and approving the work before you deliver it to your clients.</p>
+
+  <h2>Hosting and tools</h2>
+  <p>Hosting, Zao Chat, Zao Flo and other tools are subscription services billed monthly until cancelled. Their availability depends on third-party providers.</p>
+
+  <h2>No guarantee of results</h2>
+  <p>We teach a business model. We do not promise any level of income or success. See the <a href="/earnings-disclaimer/">earnings disclaimer</a>.</p>
+
+  <h2>Intellectual property</h2>
+  <p>All content on this site, including videos, text, templates and branding, belongs to The Agency School or its licensors.</p>
+
+  <h2>Limitation of liability</h2>
+  <p>To the extent the law allows, our total liability for any claim is limited to the amount you paid us in the 12 months before the claim. We are not liable for indirect or consequential losses, including lost profits.</p>
+
+  <h2>Changes</h2>
+  <p>We may update these terms. Continuing to use the site after a change means you accept the new terms.</p>
+
+  <h2>Contact</h2>
+  <p>Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+</Legal>

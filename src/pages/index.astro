@@ -1,0 +1,171 @@
+---
+import Base from '../layouts/Base.astro';
+import SignupForm from '../components/SignupForm.astro';
+import { FAQ, faqSchema } from '../faq.js';
+import { SITE_NAME } from '../consts.js';
+
+const faq = FAQ.slice(0, 5);
+---
+<Base
+  title={SITE_NAME}
+  description="Start a digital marketing agency from your phone with no coding. Get the free book on how agencies work, then join the free webinar for the how."
+  schema={[faqSchema(faq)]}
+>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow">Free book + free webinar</p>
+        <h1 style="margin-top:16px">Start a digital marketing agency from <span>your phone.</span> No coding.</h1>
+        <p class="lead">I run my agency 1 to 4 hours a day, usually from the beach. Get the free book on how agencies work, then join the webinar for the how.</p>
+        <SignupForm id="hero" />
+        <p class="fine">Results vary. The numbers on this page are the founder's own experience, not typical results. <a href="/earnings-disclaimer/">Read the earnings disclaimer</a>.</p>
+      </div>
+
+      <div class="phone" role="img" aria-label="Example of the team hub on a phone, showing three sample jobs">
+        <div class="screen">
+          <div class="bar">Team hub <small>Example</small></div>
+          <div class="job">
+            <b>Avada WP install, restaurant</b>
+            <div class="meta"><span>Your cloud hosting</span><span class="pill claimed">Claimed</span></div>
+            <div class="meta"><span>Job price</span><b style="font-family:var(--body);color:var(--ink)">$50</b></div>
+          </div>
+          <div class="job">
+            <b>SEO setup, law office</b>
+            <div class="meta"><span>Posted 4 min ago</span><span class="pill">Open</span></div>
+            <div class="meta"><span>Job price</span><b style="font-family:var(--body);color:var(--ink)">$75</b></div>
+          </div>
+          <div class="job">
+            <b>Homepage rebuild, gym</b>
+            <div class="meta"><span>Delivered today</span><span class="pill done">Done</span></div>
+            <div class="meta"><span>Job price</span><b style="font-family:var(--body);color:var(--ink)">$120</b></div>
+          </div>
+          <div class="ex">Sample jobs and prices for illustration</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof" aria-label="Founder background">
+      <div><b>100+</b><span>agency clients served across the US</span></div>
+      <div><b>20+</b><span>years in digital marketing</span></div>
+      <div><b>1 to 4</b><span>hours a day, my actual workday</span></div>
+    </div>
+
+    <section id="how">
+      <p class="eyebrow">How it works</p>
+      <h2>You sell. The team builds.</h2>
+      <p class="sub">Most people quit because they think they have to learn hosting, WordPress and design first. Here you don't.</p>
+      <div class="grid3">
+        <div class="box"><h3>Learn the playbook</h3><p>A WordPress-based agency model for SEO and website clients. It shows what to buy, which accounts to open and what to charge.</p></div>
+        <div class="box"><h3>Find your first clients</h3><p>The cheap, repeatable ways I get leads: Craigslist posts and a referral offer that pays only when you close.</p></div>
+        <div class="box"><h3>Send the work to my team</h3><p>Post a job, one of my contractors claims it, and it gets built on the hosting you rent from the hub. You keep your margin.</p></div>
+      </div>
+      <p style="margin-top:22px"><a href="/how-it-works/">See the full step-by-step process</a></p>
+    </section>
+
+    <section class="band" aria-labelledby="hub">
+      <div class="wrap">
+        <p class="eyebrow">The team hub</p>
+        <h2 id="hub">Rent the hard parts. Keep the margin.</h2>
+        <p class="sub">Hosting and AI tools live in one place, with my team there for support, so you are not on your own.</p>
+        <div class="math">
+          <div class="box">
+            <h3>Managed hosting</h3>
+            <div class="row"><span>You pay the hub</span><b>$10/mo</b></div>
+            <div class="row"><span>You charge your client</span><b>$40 to $60/mo</b></div>
+            <div class="row"><span>Left with you</span><b class="gain">$30 to $50/mo</b></div>
+          </div>
+          <div class="box">
+            <h3>Zao Chat and Zao Flo</h3>
+            <div class="row"><span>You pay the hub</span><b>$50/mo</b></div>
+            <div class="row"><span>You charge your client</span><b>$300/mo</b></div>
+            <div class="row"><span>Left with you</span><b class="gain">$250/mo</b></div>
+            <small>AI lead-gen chatbot and AI blog automation.</small>
+          </div>
+        </div>
+        <p class="fine" style="color:var(--band-muted)">Example math to show the model, per client, before your own costs and taxes. It is not a promise of income.</p>
+      </div>
+    </section>
+
+    <section id="offer">
+      <p class="eyebrow">The offer</p>
+      <h2>Two ways to start</h2>
+      <p class="sub">Learn it yourself, or get the full system with my contractors at my rates.</p>
+
+      <div class="founding">
+        <b>Founding cohort pricing: first 20 students</b>
+        <span>Core course $297 and Launch Package $997, in exchange for feedback.</span>
+      </div>
+
+      <div class="plans">
+        <div class="plan">
+          <div>
+            <h3>Core Course</h3>
+            <p style="color:var(--muted);margin-top:4px">Learn it yourself</p>
+          </div>
+          <div class="price"><b>$497</b><span>or 3 payments of $197</span></div>
+          <ul>
+            <li>Video playbook: start an agency with WordPress</li>
+            <li>First 3 Clients module: Craigslist, referrals, scripts</li>
+            <li>The "where everything is" map: what to buy and open</li>
+            <li>Proposal, contract and onboarding templates</li>
+            <li>Contractor list, unlocked after purchase</li>
+          </ul>
+          <a class="btn alt" href="/courses/">Compare the courses</a>
+        </div>
+
+        <div class="plan hi">
+          <div>
+            <h3>Launch Package</h3>
+            <p style="color:var(--muted);margin-top:4px">The full system and my team</p>
+          </div>
+          <div class="price"><b>$1,500</b><span>one payment</span></div>
+          <ul>
+            <li>Everything in the Core Course</li>
+            <li>My 10 contractors, hired at my rates through the hub</li>
+            <li>Hosting and tools setup guide</li>
+            <li>Monthly live 2-hour group session with replays</li>
+            <li>6 months of community access</li>
+          </ul>
+          <a class="btn" href="/free-book/">Get the free book first</a>
+        </div>
+      </div>
+
+      <div class="addons">
+        <div class="addon"><b>Template pack, $37</b><span>Extra proposals, ad swipe files and checklists.</span></div>
+        <div class="addon"><b>Hosting and tools bundle, $97 setup</b><span>Reseller hosting plus Zao Chat and Zao Flo access.</span></div>
+        <div class="addon"><b>Community, $47/month</b><span>Live class, replays and a weekly template. Free for the first 30 days.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="split">
+        <div>
+          <div class="avatar" aria-hidden="true">D</div>
+          <p class="avatar-note">Photo placeholder</p>
+        </div>
+        <div>
+          <p class="eyebrow">Your instructor</p>
+          <h2>Davey Duarte</h2>
+          <p>I'm the founder of The X Digital, a remote-first agency with 100+ clients across the US. Over 20 years I've worked on more than 1,000 projects, and today I work 1 to 4 hours a day from wherever I'm living.</p>
+          <p><strong>What I do and don't do.</strong> I show you the system and give you the team. I don't do your work for you and I can't guarantee results. Your income depends on the clients you win and the effort you put in.</p>
+          <p><a href="/about/">Read Davey's full story</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="padding-top:8px">
+      <p class="eyebrow">Questions</p>
+      <h2>Before you sign up</h2>
+      {faq.map((f) => (
+        <details><summary>{f.q}</summary><p>{f.a}</p></details>
+      ))}
+      <p style="margin-top:22px"><a href="/faq/">See all frequently asked questions</a></p>
+    </section>
+
+    <section class="cta">
+      <h2>Get the free book. Then come to the webinar.</h2>
+      <p class="sub" style="margin-inline:auto">Learn who, what, why, where and when. The how is on the webinar.</p>
+      <SignupForm id="bottom" center />
+    </section>
+  </div>
+</Base>
