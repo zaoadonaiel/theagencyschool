@@ -18,14 +18,14 @@ const course = (name: string, description: string, price: string) => ({
   description="Compare the Core Course ($497) and the Launch Package ($1,500). Founding cohort pricing for the first 20 students: $297 and $997."
   schema={[
     course('Core Course', 'Video playbook for starting a WordPress digital marketing agency, with first-client scripts, templates and a contractor list.', '497'),
-    course('Launch Package', 'The Core Course plus 10 contractors at founder rates, a hosting and tools setup guide, monthly live sessions and 6 months of community.', '1500'),
+    course('Launch Package', 'The Core Course plus a done-for-you setup: your first website built and hosted free for a year, business email and local SEO, monthly live sessions and 6 months of community.', '1500'),
   ]}
 >
   <div class="wrap">
     <div class="page-head">
       <p class="eyebrow">Courses</p>
       <h1>Two ways to start</h1>
-      <p class="lead">Learn it yourself, or get the full system with my contractors at my rates.</p>
+      <p class="lead">Learn it yourself, or have my team set up your agency for you.</p>
     </div>
 
     <section style="padding-top:28px">
@@ -61,13 +61,13 @@ const course = (name: string, description: string, price: string) => ({
         <div class="plan hi">
           <div>
             <h2 style="font-size:26px;margin:0">Launch Package</h2>
-            <p style="color:var(--muted);margin-top:4px">The full system and my team</p>
+            <p style="color:var(--muted);margin-top:4px">Done-for-you agency setup</p>
           </div>
           <div class="price"><b>$1,500</b><span>one payment</span></div>
           <ul>
             <li>Everything in the Core Course</li>
-            <li>My 10 contractors, hired at my rates through the hub</li>
-            <li>Hosting and tools setup guide</li>
+            <li>We create your first website and host it free for one year</li>
+            <li>We set up your business email and SEO your site for local search</li>
             <li>Monthly live 2-hour group session with replays</li>
             <li>6 months of community access</li>
           </ul>
@@ -83,9 +83,9 @@ const course = (name: string, description: string, price: string) => ({
     <section style="padding-top:0">
       <h2>Add-ons</h2>
       <div class="addons">
-        <div class="addon"><b>Template pack, $37</b><span>Extra proposals, ad swipe files and checklists.</span>{STRIPE_LINKS.templatePack && <a href={STRIPE_LINKS.templatePack} rel="nofollow">Buy template pack</a>}</div>
-        <div class="addon"><b>Hosting and tools bundle, $97 setup</b><span>Reseller hosting plus Zao Chat and Zao Flo access.</span>{STRIPE_LINKS.hostingBundle && <a href={STRIPE_LINKS.hostingBundle} rel="nofollow">Buy hosting and tools bundle</a>}</div>
-        <div class="addon"><b>Community, $47/month</b><span>Live class, replays and a weekly template. Free for the first 30 days.</span>{STRIPE_LINKS.community && <a href={STRIPE_LINKS.community} rel="nofollow">Join the community</a>}</div>
+        <div class="addon"><b>Invoicing and Proposals, $49</b><span>Video templates and setup guide for invoicing, contracts, and proposals.</span>{STRIPE_LINKS.templatePack && <a href={STRIPE_LINKS.templatePack} rel="nofollow">Buy Invoicing and Proposals</a>}</div>
+        <div class="addon"><b>Hosting and Tools Bundle, $97 setup</b><span>Learn the full MRR model to scale your business. Close deals with hosting. Get all the tools and infrastructure needed to run your own hosting company.</span>{STRIPE_LINKS.hostingBundle && <a href={STRIPE_LINKS.hostingBundle} rel="nofollow">Buy the Hosting and Tools Bundle</a>}</div>
+        <div class="addon"><b>Community, $47/month</b><span>Private Telegram group. Biweekly live class for 1-2 hours with Davey to answer your questions and connect with the community. Free for the first 30 days.</span>{STRIPE_LINKS.community && <a href={STRIPE_LINKS.community} rel="nofollow">Join the community</a>}</div>
       </div>
       <p class="fine" style="margin-top:22px">Secure checkout by Stripe. Your course access link arrives by email {DELIVERY_TIME} of purchase. Before you buy, read the <a href="/refund-policy/">refund policy</a> and the <a href="/earnings-disclaimer/">earnings disclaimer</a>.</p>
     </section>

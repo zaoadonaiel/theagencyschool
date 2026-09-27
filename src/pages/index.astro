@@ -20,34 +20,14 @@ const faq = FAQ.slice(0, 5);
         <SignupForm id="hero" />
         <p class="fine">Results vary. The numbers on this page are the founder's own experience, not typical results. <a href="/earnings-disclaimer/">Read the earnings disclaimer</a>.</p>
       </div>
-
-      <div class="phone" role="img" aria-label="Example of the team hub on a phone, showing three sample jobs">
-        <div class="screen">
-          <div class="bar">Team hub <small>Example</small></div>
-          <div class="job">
-            <b>Avada WP install, restaurant</b>
-            <div class="meta"><span>Your cloud hosting</span><span class="pill claimed">Claimed</span></div>
-            <div class="meta"><span>Job price</span><b style="font-family:var(--body);color:var(--ink)">$50</b></div>
-          </div>
-          <div class="job">
-            <b>SEO setup, law office</b>
-            <div class="meta"><span>Posted 4 min ago</span><span class="pill">Open</span></div>
-            <div class="meta"><span>Job price</span><b style="font-family:var(--body);color:var(--ink)">$75</b></div>
-          </div>
-          <div class="job">
-            <b>Homepage rebuild, gym</b>
-            <div class="meta"><span>Delivered today</span><span class="pill done">Done</span></div>
-            <div class="meta"><span>Job price</span><b style="font-family:var(--body);color:var(--ink)">$120</b></div>
-          </div>
-          <div class="ex">Sample jobs and prices for illustration</div>
-        </div>
-      </div>
     </div>
 
     <div class="proof" aria-label="Founder background">
-      <div><b>100+</b><span>agency clients served across the US</span></div>
+      <div><b>Currently</b><span>hosting client sites</span></div>
       <div><b>20+</b><span>years in digital marketing</span></div>
       <div><b>1 to 4</b><span>hours a day, my actual workday</span></div>
+      <div><b>1,000</b><span>projects completed</span></div>
+      <div><b>6 figures</b><span>and growing</span></div>
     </div>
 
     <section id="how">
@@ -57,7 +37,7 @@ const faq = FAQ.slice(0, 5);
       <div class="grid3">
         <div class="box"><h3>Learn the playbook</h3><p>A WordPress-based agency model for SEO and website clients. It shows what to buy, which accounts to open and what to charge.</p></div>
         <div class="box"><h3>Find your first clients</h3><p>The cheap, repeatable ways I get leads: Craigslist posts and a referral offer that pays only when you close.</p></div>
-        <div class="box"><h3>Send the work to my team</h3><p>Post a job, one of my contractors claims it, and it gets built on the hosting you rent from the hub. You keep your margin.</p><p style="margin-top:10px"><a href={SHOP_URL}>Post a job in the shop</a></p></div>
+        <div class="box"><h3>Send the work to my team</h3><p>Order it in the shop and my team builds it on our hosting. You keep your margin.</p><p style="margin-top:10px"><a href={SHOP_URL}>Post a job in the shop</a></p></div>
       </div>
       <p style="margin-top:22px"><a href="/how-it-works/">See the full step-by-step process</a></p>
     </section>
@@ -72,7 +52,8 @@ const faq = FAQ.slice(0, 5);
             <h3>Managed hosting</h3>
             <div class="row"><span>You pay the hub</span><b>$10/mo</b></div>
             <div class="row"><span>You charge your client</span><b>$40 to $60/mo</b></div>
-            <div class="row"><span>Left with you</span><b class="gain">$30 to $50/mo</b></div>
+            <div class="row"><span>Left with you</span><b class="gain">$30 to $50/mo MRR</b></div>
+            <small>MRR = Monthly Recurring Revenue. This is the predictable income you make every month from one client. When you have 10 clients at $50/mo MRR each, that's $500/mo passive income. This is the metric successful agencies track.</small>
           </div>
           <div class="box">
             <h3>Zao Chat and Zao Flo</h3>
@@ -89,11 +70,11 @@ const faq = FAQ.slice(0, 5);
     <section id="shop" aria-labelledby="shop-title">
       <p class="eyebrow">The shop</p>
       <h2 id="shop-title">Need a website built? Order it here.</h2>
-      <p class="sub">Pick a package and pay by card. The first contractor on my team to claim it builds it on our hosting, and you approve it before it counts as done.</p>
+      <p class="sub">Pick a package and pay by card. My team builds it on our hosting, and you approve it before it counts as done.</p>
       <ol class="steps">
         <li><b>Pick a package and pay</b><span>WordPress with the Avada theme. Bring your own Avada license code.</span></li>
-        <li><b>A contractor claims it</b><span>You choose 24 hours or 1 to 3 business days. The clock starts when they claim it.</span></li>
-        <li><b>Review and approve</b><span>You get the site link and a one-time WordPress login link. Something wrong? Report it and the owner steps in.</span></li>
+        <li><b>My team builds it</b><span>You choose 24 hours or 1 to 3 business days. The clock starts when they claim it.</span></li>
+        <li><b>Review and approve</b><span>You get the site link and a one-time WordPress login link. Something wrong? Report it and we're available 24/7 to help.</span></li>
       </ol>
       <p style="margin-top:22px"><a class="btn" href={SHOP_URL}>See packages and prices</a></p>
     </section>
@@ -101,7 +82,7 @@ const faq = FAQ.slice(0, 5);
     <section id="offer">
       <p class="eyebrow">The offer</p>
       <h2>Two ways to start</h2>
-      <p class="sub">Learn it yourself, or get the full system with my contractors at my rates.</p>
+      <p class="sub">Learn it yourself, or have my team set up your agency for you.</p>
 
       <div class="founding">
         <b>Founding cohort pricing: first 20 students</b>
@@ -128,13 +109,13 @@ const faq = FAQ.slice(0, 5);
         <div class="plan hi">
           <div>
             <h3>Launch Package</h3>
-            <p style="color:var(--muted);margin-top:4px">The full system and my team</p>
+            <p style="color:var(--muted);margin-top:4px">Done-for-you agency setup</p>
           </div>
           <div class="price"><b>$1,500</b><span>one payment</span></div>
           <ul>
             <li>Everything in the Core Course</li>
-            <li>My 10 contractors, hired at my rates through the hub</li>
-            <li>Hosting and tools setup guide</li>
+            <li>We create your first website and host it free for one year</li>
+            <li>We set up your business email and SEO your site for local search</li>
             <li>Monthly live 2-hour group session with replays</li>
             <li>6 months of community access</li>
           </ul>
@@ -143,9 +124,9 @@ const faq = FAQ.slice(0, 5);
       </div>
 
       <div class="addons">
-        <div class="addon"><b>Template pack, $37</b><span>Extra proposals, ad swipe files and checklists.</span></div>
-        <div class="addon"><b>Hosting and tools bundle, $97 setup</b><span>Reseller hosting plus Zao Chat and Zao Flo access.</span></div>
-        <div class="addon"><b>Community, $47/month</b><span>Live class, replays and a weekly template. Free for the first 30 days.</span></div>
+        <div class="addon"><b>Invoicing and Proposals, $49</b><span>Video templates and setup guide for invoicing, contracts, and proposals.</span></div>
+        <div class="addon"><b>Hosting and Tools Bundle, $97 setup</b><span>Learn the full MRR model to scale your business. Close deals with hosting. Get all the tools and infrastructure needed to run your own hosting company.</span></div>
+        <div class="addon"><b>Community, $47/month</b><span>Private Telegram group. Biweekly live class for 1-2 hours with Davey to answer your questions and connect with the community. Free for the first 30 days.</span></div>
       </div>
     </section>
 
