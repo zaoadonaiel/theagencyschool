@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SignupForm from '../components/SignupForm.astro';
 import { FAQ, faqSchema } from '../faq.js';
-import { SITE_NAME } from '../consts.js';
+import { SITE_NAME, SHOP_URL } from '../consts.js';
 
 const faq = FAQ.slice(0, 5);
 ---
@@ -57,7 +57,7 @@ const faq = FAQ.slice(0, 5);
       <div class="grid3">
         <div class="box"><h3>Learn the playbook</h3><p>A WordPress-based agency model for SEO and website clients. It shows what to buy, which accounts to open and what to charge.</p></div>
         <div class="box"><h3>Find your first clients</h3><p>The cheap, repeatable ways I get leads: Craigslist posts and a referral offer that pays only when you close.</p></div>
-        <div class="box"><h3>Send the work to my team</h3><p>Post a job, one of my contractors claims it, and it gets built on the hosting you rent from the hub. You keep your margin.</p></div>
+        <div class="box"><h3>Send the work to my team</h3><p>Post a job, one of my contractors claims it, and it gets built on the hosting you rent from the hub. You keep your margin.</p><p style="margin-top:10px"><a href={SHOP_URL}>Post a job in the shop</a></p></div>
       </div>
       <p style="margin-top:22px"><a href="/how-it-works/">See the full step-by-step process</a></p>
     </section>
@@ -84,6 +84,18 @@ const faq = FAQ.slice(0, 5);
         </div>
         <p class="fine" style="color:var(--band-muted)">Example math to show the model, per client, before your own costs and taxes. It is not a promise of income.</p>
       </div>
+    </section>
+
+    <section id="shop" aria-labelledby="shop-title">
+      <p class="eyebrow">The shop</p>
+      <h2 id="shop-title">Need a website built? Order it here.</h2>
+      <p class="sub">Pick a package and pay by card. The first contractor on my team to claim it builds it on our hosting, and you approve it before it counts as done.</p>
+      <ol class="steps">
+        <li><b>Pick a package and pay</b><span>WordPress with the Avada theme. Bring your own Avada license code.</span></li>
+        <li><b>A contractor claims it</b><span>You choose 24 hours or 1 to 3 business days. The clock starts when they claim it.</span></li>
+        <li><b>Review and approve</b><span>You get the site link and a one-time WordPress login link. Something wrong? Report it and the owner steps in.</span></li>
+      </ol>
+      <p style="margin-top:22px"><a class="btn" href={SHOP_URL}>See packages and prices</a></p>
     </section>
 
     <section id="offer">
