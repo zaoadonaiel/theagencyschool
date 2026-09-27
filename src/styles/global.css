@@ -127,6 +127,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
 .nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:10px 2px;min-height:44px;display:inline-flex;align-items:center}
 .nav a:hover,.nav a[aria-current="page"]{color:var(--lagoon);text-decoration:underline;text-underline-offset:4px}
 .nav .btn{padding:13px 18px;color:var(--sun-ink);text-decoration:none}
+.nav .btn.alt{color:var(--lagoon-ink)}
 footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
 footer a{color:var(--muted);padding:8px 0;display:inline-block}
 footer a:hover{color:var(--ink)}

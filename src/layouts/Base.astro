@@ -97,7 +97,7 @@ const path = Astro.url.pathname;
         {nav.map((l) => (
           <a href={l.href} aria-current={path === l.href ? 'page' : undefined}>{l.label}</a>
         ))}
-        <a href={SHOP_URL}>Shop</a>
+        <a class="btn alt" href={SHOP_URL}>Order a website</a>
         <a class="btn" href="/free-book/">Get the free book</a>
       </nav>
     </header>
