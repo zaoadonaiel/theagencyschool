@@ -83,10 +83,10 @@ h2{font-size:clamp(30px,4.6vw,46px);font-weight:800;margin:12px 0 14px}
 .addon{border:1px dashed var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:4px}
 .addon b{font:700 16px/1.2 var(--display)}
 .addon span{font-size:14.5px;color:var(--muted)}
-.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start}
+.split{display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px;align-items:start}
 .avatar{display:block;aspect-ratio:1;max-width:260px;width:100%;height:auto;border-radius:20px;object-fit:cover;background:var(--tint)}
 .split p+p{margin-top:12px}
-.split p{color:var(--muted)}
+.split p{color:var(--muted);max-width:64ch}
 .split p strong{color:var(--ink)}
 details{border-top:1px solid var(--line);padding-block:16px}
 details:last-of-type{border-bottom:1px solid var(--line)}
